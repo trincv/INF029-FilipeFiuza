@@ -9,7 +9,7 @@ int main() {
   int GeralOption = -1;
 
   while(GeralOption != 0){
-    printf("INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA(IFBA)\n");
+    printf("INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA(IFBA)\n\n");
     printf("0 - Fechar o progrma\n");
     printf("1 - Gerenciar alunos\n");
     printf("2 - Gerenciar professores\n");
