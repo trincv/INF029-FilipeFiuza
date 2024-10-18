@@ -1,11 +1,13 @@
 #include <stdio.h>
-#include "Person.h"
+#include "Person\Person.h"
+#include "StudentManagment.h"
 
 
 void Student_Managment(){
+  
   int Is_Valid = 1;
   
-  Person student(QtdStudent);
+  Person student();
 
   printf("Insira a matrícula do aluno: ");
 

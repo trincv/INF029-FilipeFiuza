@@ -1,21 +1,18 @@
 #include <stdio.h>
-#include "Views/StudentView.h"
+#include "Views\StudentView.c"
+#include "Views\GeralView.c"
 
 #define CAD_SUCESS -1
 #define CAD_FAIL -2
 
-int main() {
+int main(){  
 
   int GeralOption = -1;
 
   while(GeralOption != 0){
-    printf("INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA(IFBA)\n\n");
-    printf("0 - Fechar o progrma\n");
-    printf("1 - Gerenciar alunos\n");
-    printf("2 - Gerenciar professores\n");
-    printf("3 - Gerenciar disciplinas\n");
-    printf("4 - ''''''''''''''''''\n");
-    printf("Escolha uma atividade: \n");
+    
+    Geral_View();
+
     scanf("%d", &GeralOption);
 
     switch (GeralOption) {
@@ -25,7 +22,7 @@ int main() {
     case 1:
       Student_View();
     default:
-      printf("Opção inválida!\n");
+      printf("Opção inválida!\n\n");
     }
   }
 }

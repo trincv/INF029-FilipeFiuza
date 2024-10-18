@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "StudentView.h"
+//#include <PersonManagment\StudentManagment.c>
 
 void Student_View(){
   int StudentOption = -1;
@@ -18,9 +20,9 @@ void Student_View(){
         printf("Retornando...\n");
         break;
       case 1:
-        
+        //Student_Managment();
       default:
-        printf("Opção inválida!\n");
+        printf("Opção inválida!\n\n");
     }
   }
 }
