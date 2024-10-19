@@ -1,1 +1,1 @@
-int Student_Managment(int QtdStudent, Person Student_List);
+int Student_Managment(Person Student_List[], int QtdStudent);
