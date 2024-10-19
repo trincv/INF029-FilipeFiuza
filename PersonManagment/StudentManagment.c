@@ -1,22 +1,18 @@
 #include <stdio.h>
-#include "Person\Person.h"
 #include "StudentManagment.h"
 
 
-void Student_Managment(){
+int Student_Managment(int QtdStudent, Person Student_List){
   
-  int Is_Valid = 1;
+  int is_valid = 1;
   
-  Person student();
-
-  printf("Insira a matrícula do aluno: ");
-
-  while(Is_Valid == 1){
-    scanf("%d", &student.identification);
-    if(student.identification >= 10000000 && student.identification <= 100000000)
-      Is_Valid = 0;
-    else
-      printf("Matrícula inválida! Insira novamente: ");
+  printf("Digite a matricula do aluno: ");
+  while(is_valid == 1){
+    scanf("%d", &Student_List[QtdStudent].identification);
+    if(Student_List[QtdStudent].identification >= 10000000 && Student_List[QtdStudent].identification <= 99999999)
+      is_valid = 0;
+    else 
+    printf("Matrícula inválida! Digite novamente: ");
   }
-  
+  return 0;
 }
