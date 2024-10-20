@@ -28,12 +28,59 @@ while(is_valid == 1){
             Student_List[QtdStudent].Birth.day = (data[0] - '0') * 10 + data[1] - '0'; 
             Student_List[QtdStudent].Birth.month = (data[3] - '0') * 10 + data[4] - '0';
             Student_List[QtdStudent].Birth.year = (data[6] - '0') * 1000 + (data[7] - '0') * 100 + (data[8] - '0') * 10 + data[9] - '0';
-            is_valid = 0;
-          }
+            
+            int is_leap_year;
+            
+            if(Student_List[QtdStudent].Birth.year % 4 == 0 && Student_List[QtdStudent].Birth.year % 100 > 0)
+                is_leap_year = 0;
+            else
+                if(Student_List[QtdStudent].Birth.year % 4 == 0 && Student_List[QtdStudent].Birth.year % 100 == 0 && Student_List[QtdStudent].Birth.year % 400 == 0)
+                    is_leap_year = 0;
+                else
+                    is_leap_year = 1;
+            
+            if(Student_List[QtdStudent].Birth.year < 2022 && Student_List[QtdStudent].Birth.year > 1924){
+                
+                if(Student_List[QtdStudent].Birth.month > 0 && Student_List[QtdStudent].Birth.month <= 12){
+                    switch(Student_List[QtdStudent].Birth.month){
+                        case 2:{
+                            if(is_leap_year == 0){
+                                if(Student_List[QtdStudent].Birth.day > 29 ||  Student_List[QtdStudent].Birth.day < 1)
+                                    printf("\nData invalida! Digite novamente: 2 \n");
+                                else
+                                    is_valid = 0;
+                            } else
+                                if( Student_List[QtdStudent].Birth.day > 28 ||  Student_List[QtdStudent].Birth.day < 1)
+                                    printf("\nData invalida! Digite novamente: 2\n");
+                                else
+                                    is_valid = 0;
+                            break;
+                        }
+                        case 4:
+                        case 6:
+                        case 9:
+                        case 11:
+                            if(Student_List[QtdStudent].Birth.day > 30 ||  Student_List[QtdStudent].Birth.day < 1)
+                                printf("\nData invalida! Digite novamente: \n");
+                            else
+                                is_valid = 0;
+                            break;
+                        default:
+                            if( Student_List[QtdStudent].Birth.day > 31 ||  Student_List[QtdStudent].Birth.day < 1)
+                                printf("\nData invalida! Digite novamente: \n");
+                            else
+                                is_valid = 0;
+                            break;
+                    }
+                } else
+                    printf("\nData invalida! Digite novamente: \n");
+            } else
+                printf("\nData invalida! Digite novamente: \n");
+        }
         else
             printf("\nData invalida! Digite novamente: \n");
     }
     else 
         printf("\nData invalida! Digite novamente: \n");
-    }
+}
 }

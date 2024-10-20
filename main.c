@@ -48,8 +48,8 @@ int main(){
             for(int icont = 0; icont < QtdStudent; icont++){
               printf("%d - %d", icont + 1, Student_List[icont].identification);
               printf(" // %s", Student_List[icont].name);
-              printf(" // %d/", Student_List[icont].Birth.day);
-              printf("%d/", Student_List[icont].Birth.month);
+              printf(" // %02d/", Student_List[icont].Birth.day);
+              printf("%02d/", Student_List[icont].Birth.month);
               printf("%d\n", Student_List[icont].Birth.year);
             }
             break;
