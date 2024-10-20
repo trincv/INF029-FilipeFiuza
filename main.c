@@ -39,14 +39,18 @@ int main(){
             else{
               Student_Managment(Student_List,QtdStudent);
               QtdStudent++;
-              printf("Cadastro concluído");
+              printf("\nCadastro concluído\n");
             }
           break;
           }
           case 2:{
+            printf("\n");
             for(int icont = 0; icont < QtdStudent; icont++){
               printf("%d - %d", icont + 1, Student_List[icont].identification);
-              printf(" / %s\n", Student_List[icont].name);
+              printf(" // %s", Student_List[icont].name);
+              printf(" // %d/", Student_List[icont].Birth.day);
+              printf("%d/", Student_List[icont].Birth.month);
+              printf("%d\n", Student_List[icont].Birth.year);
             }
             break;
           }
