@@ -13,10 +13,9 @@ int Student_Managment(Person Student_List[], int QtdStudent){
       else 
       printf("Matrícula inválida! Digite novamente: ");
     }
-
+    
     printf("Digite o nome do estudante: ");
-    //fgets(Student_List[QtdStudent].name, 60, stdin);
-    scanf("%s", Student_List[QtdStudent].name);
-
+    scanf(" %49[^\n]", Student_List[QtdStudent].name);
+    
   return 0;
 }
