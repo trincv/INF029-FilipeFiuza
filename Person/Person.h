@@ -5,7 +5,7 @@
 typedef struct people {
   int identification;
   char name[TAM_NOME];
-  int cpf;
+  char cpf[20];
   char genre; 
   Birthday Birth;
 } Person;

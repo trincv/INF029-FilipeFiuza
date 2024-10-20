@@ -35,7 +35,7 @@ int main(){
             break;
           case 1:{
             if(QtdStudent == TAM_STUDENT)
-              printf("A lista esta cheia");
+              printf("\nA lista esta cheia\n");
             else{
               Student_Managment(Student_List,QtdStudent);
               QtdStudent++;
@@ -50,7 +50,9 @@ int main(){
               printf(" // %s", Student_List[icont].name);
               printf(" // %02d/", Student_List[icont].Birth.day);
               printf("%02d/", Student_List[icont].Birth.month);
-              printf("%d\n", Student_List[icont].Birth.year);
+              printf("%d", Student_List[icont].Birth.year);
+              printf(" // %s", Student_List[icont].cpf);
+              printf(" // %c \n", Student_List[icont].genre);
             }
             break;
           }

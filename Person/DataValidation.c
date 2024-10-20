@@ -8,7 +8,7 @@ int is_valid = 1;
 
 while(is_valid == 1){
       int tam;
-      char data[256];
+      char data[20];
       scanf("%s", data);
     
       tam = strlen(data);
