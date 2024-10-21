@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "GeralView.h"
 
 void Geral_View(){
     printf("\nCOLÉGIO TAL NOME:\n\n");

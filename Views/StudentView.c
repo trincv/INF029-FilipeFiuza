@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "StudentView.h"
 
 void Student_View(){
 

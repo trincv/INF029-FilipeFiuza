@@ -1,1 +1,0 @@
-void Student_Managment(Person Student_List[], int QtdStudent);

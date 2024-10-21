@@ -2,7 +2,8 @@
 #include "Views\StudentView.c"
 #include "Views\GeralView.c"
 #include "Person\Person.h"
-#include "PersonManagment\StudentManagment.c"
+#include "Managments\StudentManagment.c"
+#include "Lists\StudentsList.c"
 
 #define TAM_STUDENT 3
 #define TAM_TEACHER 3
@@ -44,16 +45,7 @@ int main(){
           break;
           }
           case 2:{
-            printf("\n");
-            for(int icont = 0; icont < QtdStudent; icont++){
-              printf("%d - %d", icont + 1, Student_List[icont].identification);
-              printf(" // %s", Student_List[icont].name);
-              printf(" // %02d/", Student_List[icont].Birth.day);
-              printf("%02d/", Student_List[icont].Birth.month);
-              printf("%d", Student_List[icont].Birth.year);
-              printf(" // %s", Student_List[icont].cpf);
-              printf(" // %c \n", Student_List[icont].genre);
-            }
+            Students_Lists(Student_List,QtdStudent);
             break;
           }
           default:
@@ -69,17 +61,3 @@ int main(){
     }
   }
 }
-// int Student_Managment(Person Student_List[], int QtdStudent){
-  
-//   int is_valid = 1;
-  
-//   printf("Digite a matricula do aluno: ");
-//   while(is_valid == 1){
-//     scanf("%d", &Student_List[QtdStudent].identification);
-//     if(Student_List[QtdStudent].identification >= 10000000 && Student_List[QtdStudent].identification <= 99999999)
-//       is_valid = 0;
-//     else 
-//     printf("Matrícula inválida! Digite novamente: ");
-//   }
-//   return 1;
-// }
