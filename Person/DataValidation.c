@@ -46,12 +46,12 @@ while(is_valid == 1){
                         case 2:{
                             if(is_leap_year == 0){
                                 if(Student_List[QtdStudent].Birth.day > 29 ||  Student_List[QtdStudent].Birth.day < 1)
-                                    printf("\nData invalida! Digite novamente: 2 \n");
+                                    printf("\nData invalida! Digite novamente: ");
                                 else
                                     is_valid = 0;
                             } else
                                 if( Student_List[QtdStudent].Birth.day > 28 ||  Student_List[QtdStudent].Birth.day < 1)
-                                    printf("\nData invalida! Digite novamente: 2\n");
+                                    printf("\nData invalida! Digite novamente: ");
                                 else
                                     is_valid = 0;
                             break;
@@ -61,26 +61,26 @@ while(is_valid == 1){
                         case 9:
                         case 11:
                             if(Student_List[QtdStudent].Birth.day > 30 ||  Student_List[QtdStudent].Birth.day < 1)
-                                printf("\nData invalida! Digite novamente: \n");
+                                printf("\nData invalida! Digite novamente: ");
                             else
                                 is_valid = 0;
                             break;
                         default:
                             if( Student_List[QtdStudent].Birth.day > 31 ||  Student_List[QtdStudent].Birth.day < 1)
-                                printf("\nData invalida! Digite novamente: \n");
+                                printf("\nData invalida! Digite novamente: ");
                             else
                                 is_valid = 0;
                             break;
                     }
                 } else
-                    printf("\nData invalida! Digite novamente: \n");
+                    printf("\nData invalida! Digite novamente: ");
             } else
-                printf("\nData invalida! Digite novamente: \n");
+                printf("\nData invalida! Digite novamente: ");
         }
         else
-            printf("\nData invalida! Digite novamente: \n");
+            printf("\nData invalida! Digite novamente: ");
     }
     else 
-        printf("\nData invalida! Digite novamente: \n");
+        printf("\nData invalida! Digite novamente: ");
 }
 }

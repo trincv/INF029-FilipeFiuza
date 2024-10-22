@@ -1,10 +1,11 @@
 #include <stdio.h>
-#include "Views\StudentView.c"
-#include "Views\GeralView.c"
-#include "Person\Person.h"
-#include "Managments\StudentManagment.c"
-#include "Lists\StudentsList.c"
-
+#include "Views/StudentView.c"
+#include "Views/GeralView.c"
+#include "Person/Person.h"
+#include "Managments/StudentManagment.c"
+#include "Lists/StudentsList.c"
+#include "Atualizations/StudentAtualization.c"
+#include "Exclude/StudentsExclude.c"
 #define TAM_STUDENT 3
 #define TAM_TEACHER 3
 
@@ -48,9 +49,22 @@ int main(){
             Students_Lists(Student_List,QtdStudent);
             break;
           }
+          case 3:{
+            Student_Atualization(Student_List,QtdStudent);
+            break;
+          }
+          case 4:{
+          if(QtdStudent == 0)
+              printf("\nA lista esta vazia\n");
+            else{
+              Students_Exclude(Student_List,QtdStudent);
+              QtdStudent--;
+              printf("\nExclusao concluida\n");
+            }
+          }
           default:
             printf("Opção inválida!\n\n");
-            break;
+            break;  
         }
       }
     }
