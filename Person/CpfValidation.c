@@ -30,6 +30,6 @@ void CPF_Validation(Person Student_List[], int QtdStudent){
         if(form == 14)
             is_valid = 0;
         else
-            printf("Cpf inválido! Digite novamente: ");
+            printf("Cpf invalido! Digite novamente: ");
     }
 }

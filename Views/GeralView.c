@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 void Geral_View(){
-    printf("\nCOLÉGIO TAL NOME:\n\n");
+    printf("\nINSTITUTO TAL NOME:\n\n");
     printf("0 - Fechar programa\n");
     printf("1 - Gerenciamento de alunos\n");
     printf("2 - Gerenciamento de professores\n");

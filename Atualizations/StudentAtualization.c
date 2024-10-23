@@ -43,7 +43,7 @@ void Student_Atualization(Person Student_List[], int QtdStudent){
                 while(is_valid == 1){
                     scanf(" %c", &Student_List[QtdStudent].genre);
                     if(Student_List[QtdStudent].genre != 'M' && Student_List[QtdStudent].genre != 'F')
-                        printf("Gênero inválido! Digite novamente: ");
+                        printf("Genero invalido! Digite novamente: ");
                     else
                         is_valid = 0;
                 }
@@ -52,7 +52,7 @@ void Student_Atualization(Person Student_List[], int QtdStudent){
             break;
         }
         if(AtualizationOption < 0 || AtualizationOption > 2)
-            printf("\nOpção inválida!");
+            printf("\nOpcao invalida!");
     }
 
 

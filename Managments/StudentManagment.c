@@ -1,5 +1,4 @@
  #include <stdio.h>
- //#include <string.h>
  #include "../Person/DataValidation.c"
  #include "../Person/CpfValidation.c"
 
@@ -13,7 +12,7 @@ void Student_Managment(Person Student_List[], int QtdStudent){
       if(Student_List[QtdStudent].identification >= 1 && Student_List[QtdStudent].identification <= 99)
         is_valid = 0;
       else 
-      printf("Matrícula inválida! Digite novamente: ");
+      printf("Matricula invalida! Digite novamente: ");
     }
     
     printf("Digite o nome do estudante: ");
@@ -28,12 +27,12 @@ void Student_Managment(Person Student_List[], int QtdStudent){
 
     is_valid = 1;
 
-    printf("Digite o gênero M/F: ");
+    printf("Digite o genero M/F: ");
     
     while(is_valid == 1){
       scanf(" %c", &Student_List[QtdStudent].genre);
       if(Student_List[QtdStudent].genre != 'M' && Student_List[QtdStudent].genre != 'F')
-        printf("Gênero inválido! Digite novamente: ");
+        printf("Genero invalido! Digite novamente: ");
       else
         is_valid = 0;
     }

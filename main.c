@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "Views/StudentView.c"
+#include "Views/TeacherView.c"
 #include "Views/GeralView.c"
 #include "Person/Person.h"
 #include "Managments/StudentManagment.c"
@@ -10,7 +11,7 @@
 #define TAM_TEACHER 3
 
 int main(){  
-  int QtdStudent = 0;
+  int QtdStudent = 0, QtdTeacher = 0;
   Person Student_List[TAM_STUDENT];
   //Person Teacher_List[TAM_TEACHER];
 
@@ -26,7 +27,7 @@ int main(){
     case 0:
       printf("Fechando o programa...\n");
       break;
-    case 1:{
+    case 1:{                          //Gerenciamento de alunos
       int StudentOption = -1;
       while(StudentOption != 0){
         Student_View();
@@ -68,10 +69,52 @@ int main(){
         }
       }
     }
-    case 2:
-      break;
+    case 2:{                                //Gerenciamento de professores
+      int TeacherOption = -1;
+      while(TeacherOption != 0){
+        Teacher_View();
+        scanf("%d", &TeacherOption);
+        switch(TeacherOption){
+          case 0:
+            printf("Retornando...\n");
+            break;
+          // case 1:{
+          //   if(QtdTeacher == TAM_TEACHER)
+          //     printf("\nA lista esta cheia\n");
+          //   else{
+          //     Student_Managment(Teacher_List,QtdTeacher);
+          //     QtdTeacher++;
+          //     printf("\nCadastro concluido\n");
+          //   }
+          // break;
+          // }
+          // case 2:{
+          //   Students_Lists(Teacher_List,QtdTeacher);
+          //   break;
+          // }
+          // case 3:{
+          //   Student_Atualization(Teacher_List,QtdTeacher);
+          //   break;
+          // }
+          // case 4:{
+          // if(QtdTeacher == 0)
+          //     printf("\nA lista esta vazia\n");
+          //   else{
+          //     Students_Exclude(Teacher_List,QtdTeacher);
+          //     QtdTeacher--;
+          //     printf("\nExclusao concluida\n");
+          //  }
+          //}
+          default:
+            printf("Opção invalida!\n\n");
+            break;  
+        }
+      }
+    break;
+    }                                      
+      
     default:
-      printf("Opção inválida!\n\n");
+      printf("Opção invalida!\n\n");
     }
   }
 }
