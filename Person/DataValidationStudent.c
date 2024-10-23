@@ -2,7 +2,7 @@
 #include <string.h>
 
 
-void Date_Validation(Person Student_List[], int QtdStudent){
+void Date_Validation_Student(Person Student_List[], int QtdStudent){
 
 int is_valid = 1;
 

@@ -4,7 +4,9 @@
 #include "Views/GeralView.c"
 #include "Person/Person.h"
 #include "Managments/StudentManagment.c"
+#include "Managments/TeacherManagment.c"
 #include "Lists/StudentsList.c"
+#include "Lists/TeachersLists.c"
 #include "Atualizations/StudentAtualization.c"
 #include "Exclude/StudentsExclude.c"
 #define TAM_STUDENT 3
@@ -13,7 +15,7 @@
 int main(){  
   int QtdStudent = 0, QtdTeacher = 0;
   Person Student_List[TAM_STUDENT];
-  //Person Teacher_List[TAM_TEACHER];
+  Person Teacher_List[TAM_TEACHER];
 
   int GeralOption = -1;
 
@@ -78,20 +80,20 @@ int main(){
           case 0:
             printf("Retornando...\n");
             break;
-          // case 1:{
-          //   if(QtdTeacher == TAM_TEACHER)
-          //     printf("\nA lista esta cheia\n");
-          //   else{
-          //     Student_Managment(Teacher_List,QtdTeacher);
-          //     QtdTeacher++;
-          //     printf("\nCadastro concluido\n");
-          //   }
-          // break;
-          // }
-          // case 2:{
-          //   Students_Lists(Teacher_List,QtdTeacher);
-          //   break;
-          // }
+          case 1:{
+            if(QtdTeacher == TAM_TEACHER)
+              printf("\nA lista esta cheia\n");
+            else{
+              Teacher_Managment(Teacher_List,QtdTeacher);
+              QtdTeacher++;
+              printf("\nCadastro concluido\n");
+            }
+          break;
+          }
+          case 2:{
+            Teachers_Lists(Teacher_List,QtdTeacher);
+            break;
+          }
           // case 3:{
           //   Student_Atualization(Teacher_List,QtdTeacher);
           //   break;

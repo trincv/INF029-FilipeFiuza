@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-void CPF_Validation(Person Student_List[], int QtdStudent){
+void CPF_Validation_Teacher(Person Teacher_List[], int QtdTeacher){
 
     int is_valid = 1;
 
     while(is_valid == 1){
         int tam;
-        scanf("%s", Student_List[QtdStudent].cpf);    
+        scanf("%s", Teacher_List[QtdTeacher].cpf);    
         
-        tam = strlen(Student_List[QtdStudent].cpf);
+        tam = strlen(Teacher_List[QtdTeacher].cpf);
 
         int form = 0;
 
@@ -16,14 +16,14 @@ void CPF_Validation(Person Student_List[], int QtdStudent){
     
             for(int icont = 0; icont < 14; icont++){ // verificação do formato do cpf
                 if(icont == 11){
-                    if(Student_List[QtdStudent].cpf[icont] == '-')
+                    if(Teacher_List[QtdTeacher].cpf[icont] == '-')
                         form++;
                 } else
                     if(icont == 3 || icont == 7){
-                        if(Student_List[QtdStudent].cpf[icont] == '.')
+                        if(Teacher_List[QtdTeacher].cpf[icont] == '.')
                             form++;
                     } else
-                        if(Student_List[QtdStudent].cpf[icont] >= '0' && Student_List[QtdStudent].cpf[icont] <= '9')
+                        if(Teacher_List[QtdTeacher].cpf[icont] >= '0' && Teacher_List[QtdTeacher].cpf[icont] <= '9')
                             form++;
             }
         }

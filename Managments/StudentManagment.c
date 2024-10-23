@@ -1,6 +1,6 @@
  #include <stdio.h>
- #include "../Person/DataValidation.c"
- #include "../Person/CpfValidation.c"
+ #include "../Person/DataValidationStudent.c"
+ #include "../Person/CpfValidationStudent.c"
 
 void Student_Managment(Person Student_List[], int QtdStudent){
   
@@ -20,10 +20,10 @@ void Student_Managment(Person Student_List[], int QtdStudent){
     
     
     printf("Digite a data de nascimento DD/MM/YYYY: ");
-    Date_Validation(Student_List,QtdStudent);
+    Date_Validation_Student(Student_List,QtdStudent);
 
     printf("Digite o CPF: ");
-    CPF_Validation(Student_List,QtdStudent);
+    CPF_Validation_Student(Student_List,QtdStudent);
 
     is_valid = 1;
 
