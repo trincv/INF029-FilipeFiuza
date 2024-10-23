@@ -1,17 +1,17 @@
 #include <stdio.h>
 //#include "../Person/DataValidation.c"
 
-void Student_Atualization(Person Student_List[], int QtdStudent){
+void Teacher_Atualization(Person Teacher_List[], int QtdTeacher){
     
     int matricula, icont, achou = 1; 
-    printf("\nInsira a matricula do aluno: ");
+    printf("\nInsira a matricula do professor: ");
     while(achou == 1){
         scanf("%d", &matricula);
-        for(icont = 0; Student_List[icont].identification != matricula && icont < QtdStudent; icont++){
+        for(icont = 0; Teacher_List[icont].identification != matricula && icont < QtdTeacher; icont++){
         }
-        if(Student_List[icont].identification == matricula){
+        if(Teacher_List[icont].identification == matricula){
             achou = 0;
-            QtdStudent = icont;
+            QtdTeacher = icont;
         }
         if(achou == 1)
             printf("\nMatricula inexiste! Digite novamente: ");
@@ -26,13 +26,13 @@ void Student_Atualization(Person Student_List[], int QtdStudent){
         switch(AtualizationOption){
             case 0:{
                 printf("\nInsira o novo nome: ");
-                scanf(" %49[^\n]", Student_List[QtdStudent].name);
+                scanf(" %49[^\n]", Teacher_List[QtdTeacher].name);
                 AtualizationOption = 0;
             }
             break;
             // case 1:{
             //     printf("\nInsira a nova data de nacimento DD/MM/YYYY: ");
-            //     Date_Validation(Student_List,QtdStudent);
+            //     Date_Validation(Teacher_List,QtdTeacher);
             //     AtualizationOption = 0;
             // }
             break;
@@ -41,8 +41,8 @@ void Student_Atualization(Person Student_List[], int QtdStudent){
                 int is_valid = 1;
 
                 while(is_valid == 1){
-                    scanf(" %c", &Student_List[QtdStudent].genre);
-                    if(Student_List[QtdStudent].genre != 'M' && Student_List[QtdStudent].genre != 'F')
+                    scanf(" %c", &Teacher_List[QtdTeacher].genre);
+                    if(Teacher_List[QtdTeacher].genre != 'M' && Teacher_List[QtdTeacher].genre != 'F')
                         printf("Genero invalido! Digite novamente: ");
                     else
                         is_valid = 0;
