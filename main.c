@@ -70,6 +70,7 @@ int main(){
             break;  
         }
       }
+      break;
     }
     case 2:{                                //Gerenciamento de professores
       int TeacherOption = -1;
