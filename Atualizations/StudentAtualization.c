@@ -54,6 +54,6 @@ void Student_Atualization(Person Student_List[], int QtdStudent){
         if(AtualizationOption < 0 || AtualizationOption > 2)
             printf("\nOpcao invalida!");
     }
-    printf("\nAtualizacao conpleta!\n");
+    printf("\nAtualizacao completa!\n");
 
 }

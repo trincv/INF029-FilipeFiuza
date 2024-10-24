@@ -54,6 +54,6 @@ void Teacher_Atualization(Person Teacher_List[], int QtdTeacher){
         if(AtualizationOption < 0 || AtualizationOption > 2)
             printf("\nOpcao invalida!");
     }
-    printf("\nAtualizacao conpleta!\n");
+    printf("\nAtualizacao completa!\n");
 
 }

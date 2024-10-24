@@ -10,6 +10,7 @@
 #include "Atualizations/StudentAtualization.c"
 #include "Atualizations/TeacherAtualization.c"
 #include "Exclude/StudentsExclude.c"
+#include "Exclude/TeachersExclude.c"
 #define TAM_STUDENT 3
 #define TAM_TEACHER 3
 
@@ -65,6 +66,7 @@ int main(){
               QtdStudent--;
               printf("\nExclusao concluida\n");
             }
+            break;
           }
           break;
           default:                           //opção inválida
@@ -101,17 +103,18 @@ int main(){
             Teacher_Atualization(Teacher_List,QtdTeacher);
             break;
           }
-          // case 4:{
-          // if(QtdTeacher == 0)
-          //     printf("\nA lista esta vazia\n");
-          //   else{
-          //     Students_Exclude(Teacher_List,QtdTeacher);
-          //     QtdTeacher--;
-          //     printf("\nExclusao concluida\n");
-          //  }
-          //}
+          case 4:{                           //exclusão professor
+          if(QtdTeacher == 0)
+              printf("\nA lista esta vazia\n");
+            else{
+              Teachers_Exclude(Teacher_List,QtdTeacher);
+              QtdTeacher--;
+              printf("\nExclusao concluida\n");
+           }
+           break;
+          }
           default:                         //opção inválida
-            printf("Opção invalida!\n\n");
+            printf("Opçao invalida!\n\n");
             break;  
         }
       }
@@ -119,7 +122,7 @@ int main(){
     }                                      
       
     default:                                 //opção inválida
-      printf("Opção invalida!\n\n");
+      printf("Opcao invalida!\n\n");
     }
   }
 }
