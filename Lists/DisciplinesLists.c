@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 void Discipline_Lists(Discipline discipline_List[], int QtdDiscipline, Person Student_List[], int QtdStudent, Person Teacher_List[], int QtdTeacher){
 
@@ -7,7 +8,7 @@ void Discipline_Lists(Discipline discipline_List[], int QtdDiscipline, Person St
         printf("\nSelecione o tipo de listagem desejada:\n");
         printf("0 - Retornar\n");
         printf("1 - Listar todas as disciplinas\n");
-        printf("2 - Listar dados de uma disciplina\n");
+        printf("2 - Listar dados completos de uma disciplina\n");
         scanf("%d", &DisciplineLists_Option);
     
         switch(DisciplineLists_Option){
@@ -26,6 +27,15 @@ void Discipline_Lists(Discipline discipline_List[], int QtdDiscipline, Person St
                 }
                 break;
             }
+            // case 2:{
+            //     char code[10];
+            //     printf("\nDigite o codigo da disciplina que se deseja verificar: ");
+            //     scanf(" %49[^\n]", code);                           //comparando o codigo
+            //     for(int icont = 0; icont < QtdDiscipline; icont++)
+            //         if(strcmp(code,discipline_List[icont].code) == 0){
+
+            //         }
+            // }
             default:
                 printf("opcao invalida!\n\n");
                 break;

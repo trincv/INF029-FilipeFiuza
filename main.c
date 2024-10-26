@@ -13,6 +13,7 @@
 #include "Lists/DisciplinesLists.c"
 #include "Atualizations/StudentAtualization.c"
 #include "Atualizations/TeacherAtualization.c"
+#include "Atualizations/DisciplineAtualization.c"
 #include "Exclude/StudentsExclude.c"
 #include "Exclude/TeachersExclude.c"
 #define TAM_STUDENT 3
@@ -144,10 +145,10 @@ int main(){
             Discipline_Lists(discipline_List,QtdDiscipline,Student_List,QtdStudent,Teacher_List,QtdTeacher);
             break;
           }
-          // case 3:{                           //atualização aluno
-          //   Student_Atualization(Student_List,QtdStudent);
-          //   break;
-          // }
+          case 3:{                           //atualização disciplina
+            Discipline_Atualization(discipline_List,QtdDiscipline,Student_List,QtdStudent,Teacher_List,QtdTeacher);
+            break;
+          }
           // case 4:{                           //exclusão aluno
           //   if(QtdStudent == 0)
           //     printf("\nA lista esta vazia\n");
