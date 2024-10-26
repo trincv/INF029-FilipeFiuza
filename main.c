@@ -10,6 +10,7 @@
 #include "Managments/DisciplineManagment.c"
 #include "Lists/StudentsList.c"
 #include "Lists/TeachersLists.c"
+#include "Lists/DisciplinesLists.c"
 #include "Atualizations/StudentAtualization.c"
 #include "Atualizations/TeacherAtualization.c"
 #include "Exclude/StudentsExclude.c"
@@ -42,7 +43,7 @@ int main(){
         scanf("%d", &StudentOption);
         switch(StudentOption){
           case 0:                        //retorno
-            printf("Retornando...\n");
+            printf("\nRetornando...\n");
             break;
           case 1:{                        //cadastro aluno
             if(QtdStudent == TAM_STUDENT)
@@ -87,7 +88,7 @@ int main(){
         scanf("%d", &TeacherOption);
         switch(TeacherOption){
           case 0:                            //retorno
-            printf("Retornando...\n");
+            printf("\nRetornando...\n");
             break;
           case 1:{                          //cadastro professor
             if(QtdTeacher == TAM_TEACHER)
@@ -131,7 +132,7 @@ int main(){
         scanf("%d", &DisciplineOption);
         switch(DisciplineOption){
           case 0:                        //retorno
-            printf("Retornando...\n");
+            printf("\nRetornando...\n");
             break;
           case 1:{                        //cadastro disciplina
             Discipline_Managment(Teacher_List,QtdTeacher,discipline_List,QtdDiscipline);
@@ -139,17 +140,10 @@ int main(){
             printf("\nCadastro concluido\n");
           break;
           }
-          case 2:{
-            printf("%s ", discipline_List[0].name);
-            for(int icont = 0; icont < QtdTeacher; icont++)
-              if(discipline_List[0].Register_Teacher == Teacher_List[icont].identification)
-                printf("// %s", Teacher_List[icont].name);
+          case 2:{                         //listagem disciplina
+            Discipline_Lists(discipline_List,QtdDiscipline,Student_List,QtdStudent,Teacher_List,QtdTeacher);
+            break;
           }
-          break;
-          // case 2:{                         //listagem disciplina
-          //   Discipline_Lists(discipline_List,QtdDiscipline);
-          //   break;
-          // }
           // case 3:{                           //atualização aluno
           //   Student_Atualization(Student_List,QtdStudent);
           //   break;
