@@ -27,20 +27,36 @@ void Discipline_Lists(Discipline discipline_List[], int QtdDiscipline, Person St
                 }
                 break;
             }
-            // case 2:{
-            //     char code[10];
-            //     printf("\nDigite o codigo da disciplina que se deseja verificar: ");
-            //     scanf(" %49[^\n]", code);                           //comparando o codigo
-            //     for(int icont = 0; icont < QtdDiscipline; icont++)
-            //         if(strcmp(code,discipline_List[icont].code) == 0){
-
-            //         }
-            // }
+            case 2:{
+                char code[10];
+                int is_valid = 1;
+                printf("\nDigite o codigo da disciplina que se deseja verificar: ");
+                while(is_valid == 1){
+                    scanf(" %49[^\n]", code);             
+                    for(int icont = 0; icont < QtdDiscipline; icont++)
+                        if(strcmp(code,discipline_List[icont].code) == 0){                          
+                            printf("\n\n");
+                            printf("%d - %s ", icont + 1, discipline_List[icont].name);
+                            printf("// %s ", discipline_List[icont].code);
+                            printf("// %d ", discipline_List[icont].semester);
+                            for(int jcont = 0; jcont < QtdTeacher; jcont++)
+                                if(discipline_List[icont].Register_Teacher == Teacher_List[jcont].identification)
+                                    printf("// %s\n", Teacher_List[jcont].name);
+                            printf("\nAlunos matriculados:\n");
+                            for(int student = 0;discipline_List[icont].Register_Student[student] != -1 && student < 1; student++)
+                                for(int jcont = 0; jcont < QtdStudent; jcont++)
+                                    if(discipline_List[icont].Register_Student[student] == Student_List[jcont].identification)
+                                        printf("%d - %s\n", student + 1, Student_List[jcont].name);
+                            is_valid = 0;
+                        }
+                    if(is_valid == 1)
+                        printf("\nCodigo de disciplina invalido! Digite novamente: ");
+                }
+                break;
+            }
             default:
                 printf("opcao invalida!\n\n");
                 break;
         }
     }
-
-
 }

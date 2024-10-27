@@ -58,6 +58,26 @@ void Discipline_Atualization(Discipline discipline_List[], int QtdDiscipline, Pe
                     }
                 break;
             }
+            case 4:{
+                is_valid = 1;
+                int student;
+                
+                for(student = 0; discipline_List[position].Register_Student[student] != -1 && student < 1; student++){}
+                if(student == 1)
+                    printf("\nMaximo de alunos cadastrados na disciplina!");
+                else{
+                    printf("\nInsira a mtricula do aluno a ser cadastrado: ");                  
+                    while(is_valid == 1){
+                        scanf("%d", &discipline_List[position].Register_Student[student]);
+                        for(int icont = 0; icont < QtdStudent; icont++)
+                            if(discipline_List[position].Register_Student[student] == Student_List[icont].identification)
+                                is_valid = 0;
+                        if(is_valid == 1)
+                            printf("\nMatricula de estudante invalida! Digite novamente: ");
+                    }
+                }
+                break;
+            }
             default: 
                 printf("\nopcao invalida!\n");
                 break;

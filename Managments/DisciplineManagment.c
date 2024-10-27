@@ -21,7 +21,7 @@ void Discipline_Managment(Person Teacher_List[], int QtdTeacher, Discipline disc
         if(is_valid == 1)
             printf("Matricula de professor invalida! Digite novamente: ");
     }
-    for(int icont = 0; icont < 50; icont++)           //definindo todas as matriculas como -1
+    for(int icont = 0; icont < 1; icont++)           //definindo todas as matriculas como -1
         discipline_List[QtdDiscipline].Register_Student[icont] = -1; 
                                              
 }
