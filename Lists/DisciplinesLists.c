@@ -43,7 +43,7 @@ void Discipline_Lists(Discipline discipline_List[], int QtdDiscipline, Person St
                                 if(discipline_List[icont].Register_Teacher == Teacher_List[jcont].identification)
                                     printf("// %s\n", Teacher_List[jcont].name);
                             printf("\nAlunos matriculados:\n");
-                            for(int student = 0;discipline_List[icont].Register_Student[student] != -1 && student < 1; student++)
+                            for(int student = 0;discipline_List[icont].Register_Student[student] != -1 && student < 30; student++)
                                 for(int jcont = 0; jcont < QtdStudent; jcont++)
                                     if(discipline_List[icont].Register_Student[student] == Student_List[jcont].identification)
                                         printf("%d - %s\n", student + 1, Student_List[jcont].name);

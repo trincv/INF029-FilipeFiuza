@@ -62,9 +62,9 @@ void Discipline_Atualization(Discipline discipline_List[], int QtdDiscipline, Pe
                 is_valid = 1;
                 int student;
                 
-                for(student = 0; discipline_List[position].Register_Student[student] != -1 && student < 1; student++){}
-                if(student == 1)
-                    printf("\nMaximo de alunos cadastrados na disciplina!");
+                for(student = 0; discipline_List[position].Register_Student[student] != -1 && student < 30; student++){}
+                if(student == 30)
+                    printf("\nMaximo de alunos cadastrados na disciplina!\n");
                 else{
                     printf("\nInsira a mtricula do aluno a ser cadastrado: ");                  
                     while(is_valid == 1){
@@ -76,6 +76,25 @@ void Discipline_Atualization(Discipline discipline_List[], int QtdDiscipline, Pe
                             printf("\nMatricula de estudante invalida! Digite novamente: ");
                     }
                 }
+                break;
+            }
+            case 5:{
+                is_valid = 1;
+                int matricula;
+                printf("\nDigite a matricula do aluno que deseja excluir: ");
+                while(is_valid == 1){
+                    scanf("%d", &matricula);
+                    for(int icont = 0; icont < 3; icont++)
+                        if(discipline_List[position].Register_Student[icont] == matricula){
+                            is_valid = 0;
+                            for(icont; icont < 3 - 1; icont++){
+                                discipline_List[position].Register_Student[icont] = discipline_List[position].Register_Student[icont + 1];
+                            }
+                            discipline_List[position].Register_Student[3 - 1] = -1;
+                        }
+                    if(is_valid == 1)
+                        printf("\nMatricula de estudante invalida! Digite novamente: ");
+                    }
                 break;
             }
             default: 

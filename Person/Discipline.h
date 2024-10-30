@@ -2,10 +2,10 @@
 
 typedef struct Discipline_Struct{
 
-char name[20];
-char code[10];
+char name[25];
+char code[15];
 int semester;
-int Register_Student[1];
+int Register_Student[30];
 int Register_Teacher;
 
 } Discipline;
