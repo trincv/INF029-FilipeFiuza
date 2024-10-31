@@ -16,8 +16,9 @@
 #include "Atualizations/DisciplineAtualization.c"
 #include "Exclude/StudentsExclude.c"
 #include "Exclude/TeachersExclude.c"
-#define TAM_STUDENT 3
-#define TAM_TEACHER 3
+#include "Exclude/DisciplineExclude.c"
+#define TAM_STUDENT 10
+#define TAM_TEACHER 10
 #define TAM_DISCIPLINE 3
 
 int main(){  
@@ -149,17 +150,17 @@ int main(){
             Discipline_Atualization(discipline_List,QtdDiscipline,Student_List,QtdStudent,Teacher_List,QtdTeacher);
             break;
           }
-          // case 4:{                           //exclusão aluno
-          //   if(QtdStudent == 0)
-          //     printf("\nA lista esta vazia\n");
-          //   else{
-          //     Students_Exclude(Student_List,QtdStudent);
-          //     QtdStudent--;
-          //     printf("\nExclusao concluida\n");
-          //   }
-          //   break;
-          // }
-          // break;
+          case 4:{                           //exclusão disciplina
+            if(QtdDiscipline == 0)
+              printf("\nSem disciplinas cadastradas\n");
+            else{
+              Discipline_Exclude(discipline_List,QtdDiscipline);
+              QtdDiscipline--;
+              printf("\nExclusao concluida\n");
+            }
+            break;
+          }
+          break;
           default:                           //opção inválida
             printf("Opcao invalida!\n\n");
             break;  
